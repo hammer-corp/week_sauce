@@ -404,7 +404,7 @@ describe WeekSauce do
   describe "comparison" do
     let(:week) { WeekSauce.new(42) }
     
-    it "works with fixnums" do
+    it "works with integers" do
       week.should     == 42
       week.should_not == 43
     end

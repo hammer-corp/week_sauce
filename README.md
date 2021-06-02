@@ -52,7 +52,7 @@ The underlying `days` database column can be either a string or integer type.
 
 ## API
 
-Individual days can be set and read using Fixnums, strings, symbols or Date/Time objects. Additionally, there are named methods for getting and setting each of the week's days:
+Individual days can be set and read using Integers, strings, symbols or Date/Time objects. Additionally, there are named methods for getting and setting each of the week's days:
 
 ``` ruby
 time = Time.parse("2013-04-01") # A Monday
@@ -82,7 +82,7 @@ _Note that similar to `Date#wday`, Sunday is `0`, Monday is `1` and so forth._
 Several days can be set or unset using the so-named methods:
 
 ``` ruby
-# arguments can also be Fixnums or Date/Time objects
+# arguments can also be Integers or Date/Time objects
 week.set(:monday, :wednesday)    # set those days to true
 week.unset(:monday, :wednesday)  # set those days to false
 ```
@@ -103,7 +103,7 @@ week.any?    # true if at least 1 day is set
 week.many?   # true if at least 2 days are set
 week.all?    # true if all days are set
 
-# The == comparison operator works with other WeekSauce objects and Fixnums
+# The == comparison operator works with other WeekSauce objects and Integers
 week == other_week #=> true if the bitmask values match
 week == 123        #=> true if the bitmask value == 123
 ```
